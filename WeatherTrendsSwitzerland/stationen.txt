@@ -1,0 +1,14 @@
+Basel Binningen	(316 m MSL,	Eastern Jura); BAS
+Bern Zollikofen	(553 m MSL,	Central Lowlands); BER
+Chaumont (1136 m MSL,	Western Jura); CHM
+Château-d'Oex	(1029 m MSL, Western Alps);	CHD
+Great St-Bernard Pass (2472 m MSL, Southern Alps); GSB
+Davos	(1594 m MSL, Graubunden Region); DAV
+Engelberg	(1036 m MSL,	Central Alps); ENG
+Geneva Cointrin	(412 m MSL,	Western Lowlands); GVE
+Lugano	(273 m MSL, Southern Alps); LUG
+Payerne	(490 m MSL, Western Lowlands); PAY
+Segl-Maria	(1804 m MSL, Engadin Region);	SIA
+Sion	(482 m MSL,	Wallis Region); SIO
+Säntis (2502 m MSL,	Eastern Alps); SAE
+Zurich Fluntern	(556 m MSL,	Northeastern Lowlands); SMA
