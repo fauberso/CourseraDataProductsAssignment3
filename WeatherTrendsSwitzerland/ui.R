@@ -1,41 +1,35 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-# 
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
+library(googleVis)
 
-stationen <- read.csv("stationen.txt", sep = ";", header = FALSE)
+stationen <- read.csv("stationen.txt", sep = ";", header = FALSE, encoding = "UTF-8", strip.white = TRUE)
 choices <- as.list(as.character(stationen[,2]))
 names(choices) <- stationen[,1]
 
-# Define UI for application that draws a histogram
 shinyUI(fluidPage(
 
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("Weather Trends in Switzerland"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-      selectInput("select", label = h3("Weather Station:"), 
+       tags$head(tags$style("#myplot{height:600px !important;}")),
+      
+       selectInput("station", label = h3("Weather Station:"), 
                   choices = choices, 
                   selected = 1),
       
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30)
+       sliderInput("years",
+                   "Years:",
+                   min = 1864,
+                   max = 2050,
+                   value = c(1850, 2017), 
+                   sep="")
     ),
     
     # Show a plot of the generated distribution
     mainPanel(
-       plotOutput("distPlot")
+       htmlOutput("plot")
     )
   )
 ))
