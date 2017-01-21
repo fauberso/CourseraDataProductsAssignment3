@@ -35,7 +35,6 @@ shinyServer(function(input, output) {
     dataset <- na.omit(dataset[max(c(0,which(!complete.cases(dataset))))+1:nrow(dataset),])
     
     dataYears <- data.frame(Year=seq(from=min(dataset$Year), to=max(dataset$Year)))
-
     dataframe <- data.frame(
       aggregate(Temperature~Year, data=dataset, mean),
       aggregate(Temperature~Year, data=dataset, min)[2],
